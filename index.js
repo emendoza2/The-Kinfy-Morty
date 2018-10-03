@@ -17,4 +17,17 @@ client.on('message', msg => {
   }
 });
 
+client.on('message', msg => {
+  if (msg.content === 'im tired') {
+    msg.reply('Hi tired! Im Kinfy!')
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === 'im hungry') {
+    msg.reply('Hi there, hungry! Im Kinfy!')
+  }
+});
+
+
 client.login('NDk2NjM1NzgwNzQ4NTQxOTcy.DpUCPQ.DWIAA7A0_nYJj58PMj9Ak6zjAok');
