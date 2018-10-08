@@ -32,7 +32,6 @@ client.on('message', msg => {
 client.on('message', msg => {
   if (msg.content === 'Kinfy start') {
     msg.reply('Congratulations, you recieved a Regular Morty!')
-    <img src='PM-001.png'/> 
     }
 });
 
