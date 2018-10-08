@@ -24,10 +24,16 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
-  if (msg.content === 'im hungry') {
-    msg.reply('Hi there, hungry! Im Kinfy!')
+  if (msg.content === 'Im hungry') {
+    msg.reply('Hi there, hungry!  Im Kinfy!')
   }
 });
 
+client.on('message', msg => {
+  if (msg.content === 'Kinfy start') {
+    msg.reply('Congratulations, you recieved a Regular Morty!')
+    <img src="PM-001.png"/> 
+    }
+});
 
 client.login('NDk2NjM1NzgwNzQ4NTQxOTcy.DpUCPQ.DWIAA7A0_nYJj58PMj9Ak6zjAok');
