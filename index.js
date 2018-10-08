@@ -32,6 +32,8 @@ client.on('message', msg => {
 client.on('message', msg => {
   if (msg.content === 'Kinfy start') {
     msg.reply('Congratulations, you recieved a Regular Morty!')
+    e = discord.Embed()
+    e.set_image(url="https://discordapp.com/assets/e4923594e694a21542a489471ecffa50.svg")
     }
 });
 
