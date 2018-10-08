@@ -33,7 +33,7 @@ client.on('message', msg => {
   if (msg.content === 'Kinfy start') {
     msg.reply('Congratulations, you recieved a Regular Morty!')
     var MortyRegularMorty = new Discord.Attachment('PM-001.png');
-    message.channel.send(MortyRegularMorty);
+    msg.channel.send(MortyRegularMorty);
   }
 });
 
