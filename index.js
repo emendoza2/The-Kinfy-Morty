@@ -30,20 +30,20 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
-  if (msg.content === "I'm tired') {
+  if (msg.content === "I'm tired") {
     msg.reply("Hi tired! I'm Kinfy!")
   }
 });
 
 client.on('message', msg => {
   if (msg.content === "Im hungry") {
-    msg.reply("Hi there, hungry!  I'm Kinfy!")
+    msg.reply('Hi there, hungry!  Im Kinfy!')
   }
 });
 
 client.on('message', msg => {
-  if (msg.content === "im hungry") {
-    msg.reply("Hi there, hungry!  I'm Kinfy!")
+  if (msg.content === 'im hungry') {
+    msg.reply('Hi there, hungry! Im Kinfy!')
   }
 });
 
