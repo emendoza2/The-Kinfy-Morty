@@ -18,20 +18,32 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
-  if (msg.content === 'im tired') {
-    msg.reply('Hi tired! Im Kinfy!')
+  if (msg.content === "im tired") {
+    msg.reply("Hi tired! I'm Kinfy!")
   }
 });
 
 client.on('message', msg => {
-  if (msg.content === 'Im hungry') {
-    msg.reply('Hi there, hungry!  Im Kinfy!')
+  if (msg.content === "Im tired") {
+    msg.reply("Hi tired! I'm Kinfy!")
   }
 });
 
 client.on('message', msg => {
-  if (msg.content === 'im hungry') {
-    msg.reply('Hi there, hungry!  Im Kinfy!')
+  if (msg.content === "I'm tired') {
+    msg.reply("Hi tired! I'm Kinfy!")
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === "Im hungry") {
+    msg.reply("Hi there, hungry!  I'm Kinfy!")
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === "im hungry") {
+    msg.reply("Hi there, hungry!  I'm Kinfy!")
   }
 });
 
