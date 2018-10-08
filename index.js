@@ -30,6 +30,18 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
+  if (msg.content === 'im hungry') {
+    msg.reply('Hi there, hungry!  Im Kinfy!')
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === "I'm hungry") {
+    msg.reply("Hi there, hungry!  Im Kinfy!")
+  }
+});
+
+client.on('message', msg => {
   if (msg.content === 'Kinfy start') {
     msg.reply('Congratulations, you recieved a Regular Morty!')
     var MortyRegularMorty = new Discord.Attachment('PM-001.png');
