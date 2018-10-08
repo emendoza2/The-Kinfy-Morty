@@ -32,19 +32,6 @@ client.on('message', msg => {
 client.on('message', msg => {
   if (msg.content === 'Kinfy start') {
     msg.reply('Congratulations, you recieved a Regular Morty!')
-    const embed = new Discord.RichEmbed()
-  .setTitle("This is your title, it can hold 256 characters")
-  .setAuthor("Regular Morty Morty")
-  .setColor(0x00AE86)
-  .setDescription("This is your Morty. Don't lose him!")
-  .setFooter("This is the Morty that everybody gets when they start out with The Kinfy Morty.")
-  .setImage("http://rickandmorty.wikia.com/wiki/Morty_(Pocket_Mortys)?file=PM-001.png")
-  .setThumbnail("http://rickandmorty.wikia.com/wiki/Morty_(Pocket_Mortys)?file=PM-001.png")
-  .setTimestamp()
-  .setURL("http://rickandmorty.wikia.com/wiki/Morty_(Pocket_Mortys)?file=PM-001.png")
-  .addField("Regular Morty Morty",
-    "Everyone's first Morty! Your first best friend. Don't lose him!")
-  message.channel.send({embed});
     }
 });
 
