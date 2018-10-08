@@ -32,7 +32,8 @@ client.on('message', msg => {
 client.on('message', msg => {
   if (msg.content === 'Kinfy start') {
     msg.reply('Congratulations, you recieved a Regular Morty!')
-    msg.channel.send("https://vignette.wikia.nocookie.net/rickandmorty/images/6/69/PM-001.png/revision/latest?cb=20160904112641");
+    var RegularMortyImage = new Discord.Attachment('PM-001.png');
+    message.channel.send(RegularMortyImage);
   }
 });
 
