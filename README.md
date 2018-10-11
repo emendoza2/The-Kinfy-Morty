@@ -13,10 +13,14 @@ npm install
 ```
 
 ## Guide
-responses.json holds all the responses the bot can say--three categories:
+responses.json holds all the responses the bot can say, in three categories:
+
 "commands" holds everything the bot does when you type K!{command}
+
 "responses" holds plain text responses, for conversations, etc.
+
 "mentions" holds everything the bot responds to after you mention the bot.
+
 
 Look in the file for sample responses. Each one is encoded as a kay-value pair (bear with me here). For example:
 ```json
