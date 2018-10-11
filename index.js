@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const winston = require('winston.js');
+const responses = require('responses.json');
 const client = new Discord.Client();
 
 const logger = winston.createLogger({
@@ -9,7 +10,7 @@ const logger = winston.createLogger({
         //
         // - Write to all logs with level `info` and below to `combined.log`
         // - Write all logs error (and below) to `error.log`.
-        //
+		//
         new winston.transports.File({ filename: 'error.log', level: 'error' }),
         new winston.transports.File({ filename: 'combined.log' })
     ]
@@ -20,6 +21,14 @@ client.on('ready', () => {
     logger.info(`Logged in as ${client.user.tag}!`);
 });
 
+client.on('message', msg => {
+    for (trigger in responses.responses) {
+		let say = msg.replace(trigger, responses.responses[trigger]);
+		console.log(say);
+	}
+})
+
+/*
 client.on('message', msg => {
     if (msg.content === 'ping') {
         msg.reply('pong');
@@ -75,5 +84,6 @@ client.on('message', msg => {
         msg.channel.send(MortyRegularMorty);
     }
 });
+//*/
 
 client.login('NDk2NjM1NzgwNzQ4NTQxOTcy.DpUCPQ.DWIAA7A0_nYJj58PMj9Ak6zjAok');
