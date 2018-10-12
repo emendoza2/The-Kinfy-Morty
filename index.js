@@ -10,23 +10,30 @@ const logger = winston.createLogger({
         //
         // - Write to all logs with level `info` and below to `combined.log`
         // - Write all logs error (and below) to `error.log`.
-		//
+        //
         new winston.transports.File({ filename: 'error.log', level: 'error' }),
         new winston.transports.File({ filename: 'combined.log' })
     ]
 });
 
 client.on('ready', () => {
-    //console.log(`Logged in as ${client.user.tag}!`);
-    logger.info(`Logged in as ${client.user.tag}!`);
+    console.log(`Logged in as ${client.user.tag}!`);
+logger.info(`Logged in as ${client.user.tag}!`);
 });
 
 client.on('message', msg => {
     for (trigger in responses.responses) {
-		let say = msg.replace(new Regex(trigger, "i"), responses.responses[trigger]);
-        msg.reply(say);
-		console.log(say);
-	}
+        if (new RegExp(trigger, "i").test(msg.content)) {
+            //let say = msg.content.replace(new RegExp(trigger, "i"), responses.responses[trigger]);
+            //let say = r
+            let say = responses.responses[trigger];
+            if (typeof say == "array") {
+                say = say[Math.floor(Math.random()*say.length)]
+            }
+            msg.reply(say);
+            console.log(say);
+        }
+    }
 })
 
 /*
