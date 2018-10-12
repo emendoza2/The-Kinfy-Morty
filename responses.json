@@ -7,7 +7,8 @@
         "hi": "hello",
         "marco": "polo",
         "ping": "pong",
-        "i'?m hungry": ["Hi Hungry", "lol", "I have no food"]
+        "i'm hungry": ["Hi Hungry," "lol", "I have no food"]
+        "i'm tired": ["Hi Tired," "i'm Kinfy!"]
     },
 
     "mentions": {
