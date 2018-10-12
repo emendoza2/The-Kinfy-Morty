@@ -6,7 +6,8 @@
     "responses": {
         "hi": "hello",
         "marco": "polo",
-        "ping": "pong"
+        "ping": "pong",
+		"i'?m hungry": ["hi hungry", "I have no food"]
     },
 
     "mentions": {
