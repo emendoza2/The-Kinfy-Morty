@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
-const winston = require('winston.js');
-const responses = require('responses.json');
+const winston = require('winston');
+const responses = require('./responses.json');
 const client = new Discord.Client();
 
 const logger = winston.createLogger({
@@ -23,7 +23,8 @@ client.on('ready', () => {
 
 client.on('message', msg => {
     for (trigger in responses.responses) {
-		let say = msg.replace(trigger, responses.responses[trigger]);
+		let say = msg.replace(new Regex(trigger, "i"), responses.responses[trigger]);
+        msg.reply(say);
 		console.log(say);
 	}
 })

@@ -1,13 +1,15 @@
 {
-		"commands": {
-				
-		},
+    "commands": {
 
-		"responses": {
-				
-		},
+    },
 
-		"mentions": {
+    "responses": {
+        "hi": "hello",
+        "marco": "polo",
+        "ping": "pong"
+    },
 
-		}
+    "mentions": {
+
+    }
 }
