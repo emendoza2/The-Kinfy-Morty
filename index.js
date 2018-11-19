@@ -24,7 +24,7 @@ logger.info(`Logged in as ${client.user.tag}!`);
 client.on('message', msg => {
     if (client.user.discriminator == msg.author.discriminator) return;
     for (trigger in responses.responses) {
-        if (new RegExp(trigger, "i").test(msg.content)) {
+        if (new RegExp("\b"+trigger+"\b", "i").test(msg.content)) {
             let say = responses.responses[trigger];
             if (typeof say == "array") {
                 say = say[Math.floor(Math.random()*say.length)];
